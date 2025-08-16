@@ -61,6 +61,12 @@ input {
 
 }
 
+.row {
+    float: top;
+    height: 25%;
+    padding: 10px 10px;
+}
+
 .card {
     border-radius: 19px;
     padding: 15px;
