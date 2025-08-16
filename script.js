@@ -1,15 +1,15 @@
 // this should be the simplest query to get recipes from the Spoonacular API
 const APIKEY = "b1b502c2ced044b6992662f0533692c0"
 const SEARCHAPI = "https://api.spoonacular.com/recipes/complexSearch?apiKey=" + APIKEY + "&query="
-const BASICAPI = "https://api.spoonacular.com/recipes/random?apiKey=" + APIKEY
-const TESTAPI = SEARCHAPI + "pizza";
+const BASICAPI = "https://api.spoonacular.com/recipes/random?number=20&apiKey=" + APIKEY;
+const TESTAPI = SEARCHAPI + "MEAT";
 
 
 const main = document.getElementById("section");
 const form = document.getElementById("form");
 const search = document.getElementById("query");
 
-returnRecipes(TESTAPI);
+returnRecipes(BASICAPI);
 
 function returnRecipes(url) {
     fetch(url).then(res => res.json())
@@ -27,6 +27,7 @@ function returnRecipes(url) {
             console.log(recipes);
 
             recipes.forEach(element => {
+            
             
                 
             const div_card = document.createElement('div');
@@ -47,7 +48,7 @@ function returnRecipes(url) {
 
             const center = document.createElement('center');
 
-            title.innerHTML = `${element.title}`;
+            title.innerHTML = `${element.title}` || "No Title Available";;
             image.src = element.image;
 
             center.appendChild(image);

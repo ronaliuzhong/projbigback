@@ -25,6 +25,8 @@ h3 {
     padding: 14px 16px;
     text-align: center;
     text-decoration: none;
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 .topnav .search-container {
@@ -61,11 +63,6 @@ input {
 
 }
 
-.row {
-    float: top;
-    height: 25%;
-    padding: 10px 10px;
-}
 
 .card {
     border-radius: 19px;
