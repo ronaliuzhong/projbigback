@@ -5,7 +5,7 @@ const BASICAPI = "https://api.spoonacular.com/recipes/random?apiKey=" + APIKEY
 const TESTAPI = SEARCHAPI + "pizza";
 
 
-const main = document.getElementById("main");
+const main = document.getElementById("section");
 const form = document.getElementById("form");
 const search = document.getElementById("query");
 
